@@ -1,0 +1,29 @@
+.project{
+
+    h1{
+        font-size: 40px;
+        margin-left: 30px;
+
+        @media only screen and (max-width: 768px){
+            text-align: center;
+        }
+    }
+
+    .project-tiles{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 50px;
+    }
+
+    .ProjectBtn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    @media only screen and (max-width: 768px){
+        padding: 0 20px;
+    }
+}
