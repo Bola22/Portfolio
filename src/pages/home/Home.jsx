@@ -4,6 +4,8 @@ import Intro from '../../components/intro/Into'
 import About from '../../components/about/About'
 import Project from '../../components/project/Project'
 import Technologies from '../../components/technologies/Technologies'
+import Sold from '../../components/sold/Sold'
+import Footer from '../../components/footer/Footer'
 import "./home.scss"
 
 function Home() {
@@ -16,6 +18,8 @@ function Home() {
       <About />
       <Project />
       <Technologies />
+      <Sold />
+      <Footer />
     </div>
   )
 }
