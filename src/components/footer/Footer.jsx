@@ -1,8 +1,6 @@
 import React from 'react'
 import "./footer.scss"
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
+
 
 function Footer() {
   return (
@@ -13,7 +11,7 @@ function Footer() {
             <p>💖 and ✨ Always, from <span>Animashaun Basit</span></p>
             </li>
             <li>
-            <p>@2022. Made with NextJs & TailwindCSS</p>
+            <p>@2022. Made with React Js & SCSS</p>
             </li>
         </ul>
       </div>

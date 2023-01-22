@@ -1,61 +1,56 @@
-import React from 'react'
-import "./project.scss"
-import Tiles from '../tiles/Tiles'
-import "animate.css/animate.min.css";
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import Button from '../button/Button'
+import React from "react";
+import "./project.scss";
+import { projectData } from "../projectData";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+
 
 function project() {
+
   return (
-    <div className='project'>
-      <h1 className='titleSection'>Projects</h1>
+    <section className="project">
+      <h2 className="titleSection">Projects</h2>
       <div className="project-tiles">
+        <div className="project-tile">
+          {projectData.map((item, index) => {
+            return (
+              <div className="project-cont">
+                <div className="img-cont">
+                  <a href={item.website}>
+                  <img src={item.Image} alt="Project image" />
+                  </a>
+                </div>
 
-      <AnimationOnScroll animateIn="animate__fadeInLeftBig">
-        <Tiles 
-        projectTitle={"Get help Fast App"}
-        tools={"React, SCSS"}
-        description={'Web based medical emergency solution'}
-        gitUrl={"https://github.com/Bola22/Admin-Dashboard"}
-        liveUrl={"https://celadon-faun-f5b17e.netlify.app/"}
-        />
-      </ AnimationOnScroll >
-
-      <AnimationOnScroll animateIn="animate__fadeInRightBig">
-        <Tiles 
-        projectTitle={"Zimla's administrative dashboard "}
-        tools={'React, SCSS,'}
-        description={'Huddle landing page with single introductory section solution'}
-        gitUrl={"https://github.com/Bola22/Admin-Dashboard"}
-        liveUrl={"https://celadon-faun-f5b17e.netlify.app/"}
-        />
-        </AnimationOnScroll>
-
-        <AnimationOnScroll animateIn="animate__fadeInLeftBig">
-        <Tiles 
-        projectTitle={'Huddle landing page'}
-        tools={'JavaScript, CSS, HTML'}
-        description={'Huddle landing page with single introductory section solution'}
-        liveUrl={"https://celadon-faun-f5b17e.netlify.app/"}
-        gitUrl={"https://github.com/Bola22/Admin-Dashboard"}
-        />
-        </AnimationOnScroll>
-
-        <AnimationOnScroll animateIn="animate__fadeInRightBig">
-        <Tiles
-        projectTitle={'Rock Paper Scissors'}
-        tools={'JavaScript, CSS'}
-        description={'A browser based rock paper scissors game'}
-        gitUrl={"https://github.com/Bola22/Rock-Paper-Scissors-Game"}
-         />
-         </AnimationOnScroll>
+                <div className="details-cont">
+                  <div className="det">
+                  <span>{item.type}</span>
+                  <h2>{item.title}</h2>
+                  <p className="project-description">{item.description}</p>
+                  {/* <p>{item.tech}</p> */}
+                  <ul>{item.tech.map(tech => <li key={tech}> {tech} </li>)}</ul>
+                  <div className="project-links">
+                  <a href={item.website}>
+                  <OpenInNewIcon className='icon' />
+                  </a>
+                  <a href={item.github}>
+                  <GitHubIcon className='icon' />
+                  </a>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <div className="ProjectBtn">
-      <Button text = {"View More"} url = {"https://github.com/Bola22?tab=repositories"} />
+        <a href="" className="btn">
+          View More
+        </a>
       </div>
-    </div>
-  )
+    </section>
+  );
 }
 
-export default project
+export default project;

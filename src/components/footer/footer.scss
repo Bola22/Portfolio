@@ -1,8 +1,8 @@
 .footer{
-    border-top: 2px solid white;
+    // border-top: 2px solid gray;
     margin-top: 30px;
     padding: 0px 0px;
-    font-size: 18px;
+    font-size: var(--fz-xxs);
 
     ul{
         list-style: none;

@@ -1,0 +1,49 @@
+.rightsidebar{
+    width: 40px;
+    position: fixed;
+    bottom: 20px;
+    left: auto;
+    right: 40px;
+    z-index: 10;
+    color:hsl(0, 0%, 80%);
+
+    @media only screen and (max-width: 768px){
+        visibility: hidden;
+    }
+
+    .email-wrapper {
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        position: relative;
+
+        &::after{
+            content: "";
+            display: flex;
+            width: 1px;
+            height: 90px;
+            margin: 0px auto;
+            background-color: hsl(0, 0%, 80%);
+            bottom: 90px;
+    
+        }
+    }
+    a{
+    margin: 20px auto;
+    padding: 10px;
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    line-height: var(--fz-lg);
+    letter-spacing: 0.1em;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    color: hsl(0, 0%, 80%);
+
+    &:hover {
+            color: var(--scd-color);
+            transform: translateY(-1.2em);
+        }
+
+    }
+}

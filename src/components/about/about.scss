@@ -1,22 +1,111 @@
-.about{
-    h1{
-        font-size: 40px;
-        margin-left: 30px;
+.about {
 
-        @media only screen and (max-width: 768px){
-            text-align: center;
-            margin-left: 0;
-        }
+  .inner {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
 
+    @media only screen and (max-width: 768px) {
+      display: block;
     }
 
-    
-    p{
-        padding: 20px 50px;
-        font-size: 18px;
-
-        @media only screen and (max-width: 768px){
-            text-align: center;
+    .stack-list{
+      display: flex;
+      ul{
+        // margin-bottom: 70px;
+        list-style: none;
+  
+        .stack {
+          // display: flex;
+  
+          &::before {
+            content: "▹";
+            position: absolute;
+            // left: 0px;
+            margin-left: -20px;
+            margin-top: 4px;
+            color: var(--scd-color);
+            font-size: var(--fz-sm);
+            line-height: 12px;
+  
+  
+          }
+  
+          p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+          }
         }
+      }
     }
+
+    .about-img {
+      //   margin: 50px 80px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      max-width: 400px;
+      max-height: 200px;
+
+      .img-wrapper {
+        display: block;
+        position: relative;
+        // width: 100%;
+        // background-color: var(--scd-color);
+        border-radius: 4px;
+        // overflow: hidden;
+
+        &:hover{
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--scd-color);
+            top: 15px;
+            left: 15px;
+            z-index: -1;
+          }
+        }
+
+        &::before {
+          top: 0;
+          left: 0;
+          background-color: var(--scd-color);
+          mix-blend-mode: screen;
+  
+        }
+  
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border: 2px solid var(--scd-color);
+          top: 20px;
+          left: 20px;
+          z-index: -1;
+        }
+
+
+
+        img {
+          object-fit: contain;
+          width: 200px;
+          height: 200px;
+          position: relative;
+          border-radius: 4px;
+          //   mix-blend-mode: multiply;
+          //   filter: grayscale(100%) contrast(1);
+        }
+      }
+
+      
+    }
+  }
+
+
+
 }

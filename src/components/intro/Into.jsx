@@ -1,23 +1,19 @@
 import React from 'react'
 import "./intro.scss"
-import Avatar from "../../images/avartar.png"
-import Button from "../button/Button"
 
 function Into() {
   return (
-    <div className="intro">
-      <div className="left">
-        <img src={Avatar} alt="Avatar" className='avatar' />
-      </div>
+    <section className="intro">
       <div className="right">
-        <h1>Hello! 👋, I'm Animashaun Basit</h1>
-        <h2>FRONT — END DEVELOPER</h2>
+        <h4 className='span'>Hi👋, my name is</h4>
+        <h1>Animashaun Basit.</h1>
+        <h1 className='into-title-2'>FRONT-END DEVELOPER.</h1>
+        <p>Hello! My name is Basit and I enjoy creating things that live on the internet. <br />  I'm a Front-end developer and Software Engineer who is passionate about creating seamless pixel-perfect UI/UX experiences on the web while ensuring maximum accessibility, user-friendliness, and usability.</p>
         <div className="btn-container">
-          <Button text={"Get In Touch"} url={"https://github.com/Bola22"} />
-          <Button text={"Learn More"} />
+          <a href="#" className="btn">My Resume</a>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
