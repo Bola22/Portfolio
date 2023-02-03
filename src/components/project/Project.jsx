@@ -3,6 +3,7 @@ import "./project.scss";
 import { projectData } from "../projectData";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { motion } from "framer-motion";
 
 
 function project() {
@@ -14,7 +15,11 @@ function project() {
         <div className="project-tile">
           {projectData.map((item, index) => {
             return (
-              <div className="project-cont">
+              <motion.div className="project-cont" 
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ type: "easeIn", duration: 0.7, bounce: 0.3 }}
+              viewport={{ once: true }}>
                 <div className="img-cont">
                   <a href={item.website}>
                   <img src={item.Image} alt="Project image" />
@@ -38,7 +43,7 @@ function project() {
                   </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

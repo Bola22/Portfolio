@@ -1,11 +1,20 @@
-import Home from "./pages/home/Home";
+import { lazy, Suspense } from 'react';
+import Loading from "./components/loading/Loading";
+
+// const Home = lazy(() => import('./pages/home/Home'));
+
+const Home = lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import("./pages/home/Home")), 1300);
+  });
+});
 
 
 function App() {
   return (
-    <div className="App">
-      < Home />
-    </div>
+    <Suspense className="App" fallback={<Loading />}>
+    < Home />
+  </Suspense>
   );
 }
 

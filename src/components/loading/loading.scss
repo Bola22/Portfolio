@@ -1,0 +1,20 @@
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    .logo{
+        width: 150px;
+        height: 150px;
+        background: var(--scd-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 100px;
+        font-weight: 700;
+        font-family: var(--font-sans);
+        color: hsl(180, 100%, 7%);
+
+    }
+    
+}

@@ -69,8 +69,11 @@
                 ul{
                     list-style: none;
                     // display: flex;
+                    
                     li{
                         margin-right: 15px;
+                        z-index: 1;
+                        font-size: 9px;
                     }
                 }
                 
